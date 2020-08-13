@@ -8,12 +8,14 @@ Created on Sun Aug  9 10:40:27 2020
 
 
 """
-example of class that does not allow to set new attributes  
+Example of class that does not allow to set new attributes. 
+It is for testing setattr() method only.
+This task should be done properly using __slots__
 """
 
 class my_class:
     
-    accepted_attributes = ('x','y')
+    __accepted_attributes = ('x','y') # private, and static, attribute
     
     def __init__(self,x0):
         
@@ -21,15 +23,18 @@ class my_class:
         
         
     def __setattr__(self, name, value):
-        "This prohibits the instance to add other attributes than the one specified in accepted_attributes"
+        "Prohibits the instance to add other attributes than the one specified in __accepted_attributes"
         
-        if f'{name}' in self.accepted_attributes:
-          object.__setattr__(self, name, value)
-          # self.name = value # does not set the attribute properly
-          print(f'Attribute {name} set to {value}')
+        if name in self.__accepted_attributes:
+            # object here is any other object (the most base type), to avoid recursion error
+            object.__setattr__(self, name, value)
+            # self.name = value # does not set the attribute properly, it sets only the value
+            print(f'Attribute {name} set to {value}')
+        
         else:
-          # raise TypeError(f'Cannot create attribute {name}')
-          print (f'Cannot create attribute {name}')
+            # raise TypeError(f'Cannot create attribute {name}')
+            print (f'Cannot create attribute {name}')
+
 
 a = my_class(5)
 
@@ -39,4 +44,7 @@ a.z = 1
 
 y = getattr(a,'y') 
 
-print('y value:', y)         
+print('y value:', y)   
+
+
+      

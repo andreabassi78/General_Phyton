@@ -25,15 +25,27 @@ class dataset:
     def image_data (cls, name, size):
         im_size  = [size,size] 
         return cls(name, im_size)
+    
+    
+    @staticmethod
+    def normalize (data):
+        vmin = np.amin(data)
+        vmax = np.amax(data)
+        return (data - vmin) / (vmax - vmin)
+        
 
-    def display(self):
+    def display_shape(self):
         print(f'{self.name} shape:{self.data.shape}')
         
 
-data0 = dataset('signal_data', 10)
-data0.display()
+data0 = dataset('data0', 10)
+data0.display_shape()
 
 # data1 is instanciated using the modified class called with the static method image_data
-data1 = dataset.image_data('image_data', 5) 
-data1.display()
+data1 = dataset.image_data('data1', 5) 
+data1.display_shape()
 
+
+data2 = np.random.random([16, 16])
+data2 = data0.normalize(data2)
+print('data_2 max:', np.amax(data2))
