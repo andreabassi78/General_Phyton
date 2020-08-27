@@ -38,6 +38,8 @@ class dataset:
         print(f'{self.name} shape:{self.data.shape}')
         
 
+# %%Instantiation
+
 data0 = dataset('data0', 10)
 data0.display_shape()
 

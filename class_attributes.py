@@ -15,7 +15,7 @@ This task should be done properly using __slots__
 
 class my_class:
     
-    __accepted_attributes = ('x','y') # private, and static, attribute
+    __accepted_attributes = ('x','y') # __private, and static, attribute
     
     def __init__(self,x0):
         
@@ -35,6 +35,8 @@ class my_class:
             # raise TypeError(f'Cannot create attribute {name}')
             print (f'Cannot create attribute {name}')
 
+
+# %% Instantiation
 
 a = my_class(5)
 
