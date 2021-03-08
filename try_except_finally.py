@@ -16,7 +16,7 @@ try:
     
 except ZeroDivisionError as err:
     y = 0
-    print('There was an error, but do not worry, we have set x to:', y)
+    print('There was an error, but do not worry, we have set y to:', y)
     print('Error was:', err)
     
 else:
