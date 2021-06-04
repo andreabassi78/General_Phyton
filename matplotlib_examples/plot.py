@@ -12,12 +12,12 @@ y0 = np.sin(x) * x
 y1 = np.sin(x) * x**1.5
 y2 = np.sin(x) * x**2
 
-char_size = 20
+char_size = 18
 linewidth = 2
 
-plt.rc('font', family='serif', size=char_size)
+plt.rc('font', family='calibri', size=char_size)
 
-fig = plt.figure(figsize=(5,5), dpi=600)
+fig = plt.figure(figsize=(4,2), dpi=300)
 ax = fig.add_subplot(111)
 
 title = 'plot title'
@@ -45,8 +45,8 @@ ax.spines['right'].set_visible(False)
 ax.set_title(title, size=char_size*0.8)   
 ax.set_xlabel(xlabel, size=char_size)
 ax.set_ylabel(ylabel, size=char_size)
-ax.xaxis.set_tick_params(labelsize=char_size*0.7)
-ax.yaxis.set_tick_params(labelsize=char_size*0.7)
+ax.xaxis.set_tick_params(labelsize=char_size*0.5)
+ax.yaxis.set_tick_params(labelsize=char_size*0.5)
 
  
 ax.grid(True, which='major',axis='both',alpha=0.2)   

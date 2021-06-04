@@ -58,8 +58,8 @@ class Timer:
 
 
 #@calculate_extremes
+@Timer 
 @Calculate_extremes
-#@Timer 
 def generate_signal(samples_number):
     sig = np.random.random(samples_number)
     return sig
