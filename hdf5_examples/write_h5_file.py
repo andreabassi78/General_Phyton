@@ -38,7 +38,7 @@ gdaughter = parent.create_group('lev1/lev2')
 # create a dataset
 image = np.random.random([4,3])
 signal = np.ones([5])
-data_set = parent.create_dataset('im', shape=[4,3], data = image)
+data_set = son.create_dataset('im', shape=[4,3], data = image)
 data_set[:] = image
 # parent['voltage2'] = signalA
 

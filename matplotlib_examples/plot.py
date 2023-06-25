@@ -17,7 +17,7 @@ linewidth = 2
 
 plt.rc('font', family='calibri', size=char_size)
 
-fig = plt.figure(figsize=(4,2), dpi=300)
+fig = plt.figure(figsize=(4,3), dpi=300)
 ax = fig.add_subplot(111)
 
 title = 'plot title'
@@ -50,8 +50,9 @@ ax.yaxis.set_tick_params(labelsize=char_size*0.5)
 
  
 ax.grid(True, which='major',axis='both',alpha=0.2)   
-ax.legend(['y0','y1','y2'],
-          loc='best',frameon = False,
+legend = ['y0','y1','y2']
+ax.legend(legend,
+          loc='best', frameon = False,
           fontsize=char_size*0.8)
 
 fig.tight_layout()

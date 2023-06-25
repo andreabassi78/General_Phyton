@@ -52,7 +52,7 @@ def _get_h5_dataset(g, name, shape, found) :
 
 if __name__ == "__main__" :
  
-    file_name='test.h5'
+    file_name='temp.h5'
     stacks = get_h5_datasets(file_name,0) 
     print(stacks)
     
