@@ -74,10 +74,12 @@ def add_timer(function):
 #calculate_extremes
 #@Timer 
 #@Calculate_extremes
+
+@calculate_extremes
 @add_timer
 def generate_signal(samples_number):
-    #samples_number = 10000
-    sig = np.random.random(samples_number)
+    for i in range(1000):
+        sig = np.random.random(samples_number)
     return sig
 
     

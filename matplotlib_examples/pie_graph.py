@@ -12,11 +12,9 @@ plt.rc('font', family='serif', size=10)
 
 
 slices = [29,45,15,22,41]
-labels = ['primo','secondo','terzo','quarto','quinto']
+labels = ['first','second','third','fourth','fifth']
 explode = [0,0,0,0.1,0]
 
-#fig, ax = plt.subplots(figsize=(5.1667, 5.1667))
-#fig.set_facecolor('w')
 
 fig = plt.figure(figsize=(4,4), dpi=300)
 
@@ -34,3 +32,4 @@ ax.pie(slices, labels = labels, explode = explode,
 ax.set_title('My pie graph')
 
 plt.rcParams.update(plt.rcParamsDefault)
+plt.show()

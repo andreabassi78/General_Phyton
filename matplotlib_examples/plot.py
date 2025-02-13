@@ -3,6 +3,9 @@
 Created on Sat Mar  6 11:27:55 2021
 
 @author: Andrea
+
+Check this link here for plotting examples: https://matplotlib.org/stable/plot_types/index.html
+
 """
 import numpy as np
 from matplotlib import pyplot as plt
@@ -57,3 +60,4 @@ ax.legend(legend,
 
 fig.tight_layout()
 plt.rcParams.update(plt.rcParamsDefault)
+plt.show()
