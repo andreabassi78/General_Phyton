@@ -23,9 +23,9 @@ def signal_generator (omega,phi,dt,T):
 mygen = signal_generator(omega=2.2, phi = 0, dt= 0.1, T = 1)
 
 # We can now iterate throught the values provided by the generator in different ways
-
-# print(next(mygen))
-# print(mygen.__next__())
+print(dir(mygen))
+print(next(mygen))
+print(mygen.__next__())
 
 for t, y in mygen:
     print(f'{t:.2f}, {y: .3f}')
